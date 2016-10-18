@@ -34,8 +34,7 @@ template '/etc/init/statsd.conf' do
 end
 
 # define the service resource
-service 'statsd' do
-  provider Chef::Provider::Service::Upstart
+service 'statsd' do  
   restart_command 'stop statsd; start statsd'
   start_command 'start statsd'
   stop_command 'stop statsd'
